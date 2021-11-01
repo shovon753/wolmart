@@ -1,0 +1,155 @@
+@import "../../util/functions";
+@import "../../util/mixins";
+@import "../../base/color";
+@import "../../base/fonts";
+
+/*=============================
+        header start
+=============================*/
+#header {
+	height: 45px;
+	background: $header-left-bg;
+
+	.header-left {
+		background: $header-left-bg;
+
+		&__p {
+			color: $header-left-text;
+			font-size: rem(11);
+			font-family: $pop;
+			padding: 14px 0;
+			font-family: $pop;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+	}
+
+	.header-right {
+		.dropdown {
+			&__head {
+				position: relative;
+				margin: 0 6px;
+
+				&:hover {
+					.dropdown__text {
+						color: $hover;
+					}
+
+					.dropdown__box {
+						opacity: 100%;
+						visibility: visible;
+					}
+				}
+			}
+
+			&__text {
+				color: $header-right-text;
+				font-size: rem(11);
+				padding: 14px 0;
+				font-weight: 400;
+				text-transform: uppercase;
+				font-family: $pop;
+
+				i {
+					margin-left: 5px;
+				}
+			}
+
+			&__box{
+				position: absolute;
+				left: 0;
+				top: 100%;
+				box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.267);
+				text-align: center;
+				opacity: 0;
+				visibility: hidden;
+				width: 50px;
+				transition: all linear 0.3s;
+
+				&::before {
+					left: 50%;
+					top: -10px;
+					transform: translateX(-50%);
+					position: absolute;
+					content: "";
+					border-left: 10px solid transparent;
+					border-right: 10px solid transparent;
+					border-bottom: 10px solid $dropdown-bg;
+				}
+			}
+
+			&__item {
+				margin: 4px 4px;
+			}
+
+			&__link {
+				color: $header-right-text;
+				font-size: rem(11);
+				font-weight: 400;
+				text-transform: uppercase;
+				transition: all linear 0.3s;
+
+				&:hover {
+					color: $hover;
+				}
+			}
+		}
+
+		.header-divider{
+			width: 1px;
+			height: 15px;
+			background: #ccc;
+			margin: 14px 0 14px 20px;
+		}
+
+		.header-menu {
+			&__link {
+				color: $header-right-text;
+				font-family: $pop;
+				font-size: rem(11);
+				padding: 14px 0;
+				font-weight: 400;
+				text-transform: capitalize;
+				margin-left: 20px;
+				transition: all linear 0.3s;
+
+				&:hover {
+					color: $hover;
+				}
+			}
+		}
+
+		.sign-reg {
+			&__item {
+				margin-left: 20px;
+
+				&:nth-child(2) {
+					margin-left: 0;
+				}
+			}
+
+			&__link {
+				color: $header-right-text;
+				font-family: $pop;
+				font-size: rem(11);
+				padding: 14px 0;
+				font-weight: 400;
+				text-transform: capitalize;
+				transition: all linear 0.3s;
+
+				i{
+					margin-right: 6px;
+					float: left;
+					font-size: rem(15);
+				}
+
+				&:hover {
+					color: $hover;
+				}
+			}
+		}
+	}
+}
+/*=============================
+        header start
+=============================*/

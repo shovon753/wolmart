@@ -1,0 +1,214 @@
+@import "../../util/functions";
+@import "../../util/mixins";
+@import "../../base/color";
+@import "../../base/fonts";
+
+/*=============================
+        logo start
+=============================*/
+#logo{
+    padding: 32px 0;
+    background: $logo-bg;
+    border-bottom: 1px solid #eeeeee;
+
+    .logo{
+        
+        img{
+            height: 45px;
+        }
+    }
+
+    .logo-search{
+        border: 2px solid $hover;
+        border-radius: 3px;
+        height: 47px;
+        width: 482px;
+        position: relative;
+
+        .logo-select{
+            width: 143px;
+            height: 47px;
+            background: transparent;
+            border: 0;
+            text-transform: capitalize;
+            font-size: rem(12);
+            font-weight: 400;
+            font-family: $pop;
+            padding-right: 20px;
+            padding-left: 15px;
+            color: #666;
+            position: relative;
+            
+            &:before{
+                position: absolute;
+                top: 20px;
+                right: 0;
+                content: '';
+                height: 35px;
+                width: 2px;
+                background: black;
+            }
+        }
+        
+        input{
+            height: 39px;
+            width: 284px;
+            border: 0;
+            font-family: $pop;
+            font-size: rem(12);
+            padding: 9px;
+        }
+
+        button{
+            background: transparent;
+            border: 0;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+        }
+    }
+
+    .logo-end{
+        // gap: 23px;
+
+        .logo-call{
+            position: relative;
+            margin-right: 48px;
+
+            &::before{
+                position: absolute;
+                content: '';
+                height: 41px;
+                width: 1px;
+                background: #e5e5e5;
+                right: -23px;
+            }
+
+            p{
+                font-size: rem(13);
+                font-weight: 400;
+                font-family: $pop;
+                color: $logo-text;
+                transition: all linear .3s;
+                cursor: pointer;
+                
+                &:hover{
+                    color: $hover;
+                    +a{
+                        i{
+                            color: $hover;
+                        }
+                        h2{
+                            color: $hover;
+                        }
+                    }
+                }
+
+
+                span{
+                    color: #999;
+                }
+            }
+
+            a{
+                padding-left: 40px;
+                position: relative;
+
+                &:hover{
+                    i{
+                        color: $hover;
+                    }
+                    h2{
+                        color: $hover;
+                    }
+                }
+
+
+                i{
+                    left: 0;
+                    top: 0;
+                    transform: translateY(-50%);
+                    position: absolute;
+                    font-size: rem(30);
+                    color: $logo-text;
+                    transition: all linear .3s;
+                }
+
+                h2{
+                    font-size: rem(16);
+                    font-family: $pop;
+                    font-weight: 700;
+                    color: $logo-text;
+                    transition: all linear .3s;
+                }
+            }
+        }
+
+        .logo-item{
+            margin-right: 23px;
+
+            a{
+                &:hover{
+                    i{
+                        color: $hover;
+                    }
+                    p{
+                        color: $hover;
+                    }
+                }
+
+
+                i{
+                    font-size: 27px;
+                    color: $logo-text;
+                    transition: all linear .3s;
+                }
+
+                p{
+                    font-size: rem(12);
+                    font-weight: 400;
+                    font-family: $pop;
+                    color: $logo-text;
+                    transition: all linear .3s;
+                }
+            }
+        }
+
+        .logo-cart{
+
+            a{
+                &:hover{
+                    i{
+                        color: $hover;
+                    }
+                    p{
+                        color: $hover;
+                    }
+                }
+
+
+                i{
+                    font-size: 27px;
+                    color: $logo-text;
+                    transition: all linear .3s;
+                }
+
+                p{
+                    font-size: rem(12);
+                    font-weight: 400;
+                    font-family: $pop;
+                    color: $logo-text;
+                    transition: all linear .3s;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+/*=============================
+        logo end
+=============================*/
